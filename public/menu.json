@@ -1,0 +1,53 @@
+[
+     {
+       "id": 1,
+       "foodName": "Grilled Chicken Salad",
+       "image": "https://i.ibb.co.com/0txkWzV/Rectangle-15.png",
+       "rating": 4.5,
+       "protein": 30,
+       "carbs": 15,
+       "fat": 5,
+       "price": 12.99
+     },
+     {
+       "id": 2,
+       "foodName": "Avocado Toast",
+       "image": "https://i.ibb.co.com/0txkWzV/Rectangle-15.png",
+       "rating": 4.8,
+       "protein": 6,
+       "carbs": 22,
+       "fat": 12,
+       "price": 8.50
+     },
+     {
+       "id": 3,
+       "foodName": "Protein Smoothie",
+       "image": "https://i.ibb.co.com/0txkWzV/Rectangle-15.png",
+       "rating": 4.6,
+       "protein": 20,
+       "carbs": 18,
+       "fat": 2,
+       "price": 6.75
+     },
+     {
+       "id": 4,
+       "foodName": "Quinoa Bowl",
+       "image": "https://i.ibb.co/xyz/Quinoa-Bowl.png",
+       "rating": 4.7,
+       "protein": 12,
+       "carbs": 45,
+       "fat": 8,
+       "price": 10.99
+     },
+     {
+       "id": 5,
+       "foodName": "Salmon with Veggies",
+       "image": "https://i.ibb.co/xyz/Salmon-Veggies.png",
+       "rating": 4.9,
+       "protein": 40,
+       "carbs": 10,
+       "fat": 15,
+       "price": 15.50
+     }
+   ]
+   
