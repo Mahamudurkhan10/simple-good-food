@@ -11,7 +11,7 @@ const AddFood = () => {
 
     const handlePost = async(e) => {
         e.preventDefault()
-        const name = e.target.name.value;
+        const foodName = e.target.name.value;
         const image = e.target.image.value;
         const price = e.target.price.value;
         const protein = e.target.protein.value;
@@ -24,7 +24,7 @@ const AddFood = () => {
         const meal = e.target.meal.value;
 
 
-        const newPost = { name, image, price, protein, carbs, fat, category, ingredients, instructions, description, meal }
+        const newPost = { foodName, image, price, protein, carbs, fat, category, ingredients:[ingredients], instructions, description, meal }
         console.log(newPost);
 
            
@@ -49,50 +49,50 @@ const AddFood = () => {
 
 
     return <div className="bg-white p-4 rounded-lg">
-        <Link to={'/dashboard/allMenus'} className="flex gap-3 items-center mb-4"><FaArrowLeft />        Back</Link>
-        <h1 className="text-2xl font-semibold text-green-400">Add Food menu</h1>
-        <div className="mt-7">
+        <Link to={'/dashboard/manageMenu'} className="flex gap-3 items-center mb-4"><FaArrowLeft />        Back</Link>
+        <h1 className="text-2xl text-start font-semibold text-green-600">Add Food menu</h1>
+        <div className="mt-7 text-xl font-semibold ">
             <form onSubmit={handlePost}>
                 <div className="flex items-center justify-between gap-6 ">
                     <div className=" w-full ">
                         <label className="text-sm ">Name</label>
-                        <input name="name" type="text" placeholder="First name" className="w-full border-4 h-12 rounded-lg mt-2" />
+                        <input name="name" type="text" placeholder="First name" className="w-full border-2 p-2 h-12 rounded-lg mt-2" />
                     </div>
                     <div className=" w-full ">
                         <label className="text-sm ">Image</label>
-                        <input name="image" type="text" placeholder="Image" className="w-full border-4 h-12 rounded-lg mt-2" />
+                        <input name="image" type="text" placeholder="Image" className="w-full border-2 p-2 h-12 rounded-lg mt-2" />
                     </div>
                     <div className=" w-full ">
                         <label className="text-sm ">Price</label>
-                        <input name="price" type="text" placeholder="Image" className="w-full border-4 h-12 rounded-lg mt-2" />
+                        <input name="price" type="text" placeholder="price" className="w-full border-2 p-2 h-12 rounded-lg mt-2" />
                     </div>
                 </div>
 
-                <div className="flex w-3/4 mt-6   items-center justify-between gap-6 ">
+                <div className="flex w-3/4 mt-6 text-start   items-center justify-between gap-6 ">
                     <div className=" w-full ">
                         <label className="text-sm ">Protein</label>
-                        <input name="protein" type="text" placeholder="55g" className="w-full border-4 h-12 rounded-lg mt-2" />
+                        <input name="protein" type="text" placeholder="55g" className="w-full border-2 p-2 h-12 rounded-lg mt-2" />
                     </div>
                     <div className=" w-full ">
                         <label className="text-sm ">Carbs</label>
-                        <input name="carbs" type="text" placeholder="25g" className="w-full border-4 h-12 rounded-lg mt-2" />
+                        <input name="carbs" type="text" placeholder="25g" className="w-full border-2 p-2 h-12 rounded-lg mt-2" />
                     </div>
                     <div className=" w-full ">
                         <label className="text-sm ">Fat</label>
-                        <input name="fat" type="text" placeholder="20g" className="w-full border-4 h-12 rounded-lg mt-2" />
+                        <input name="fat" type="text" placeholder="20g" className="w-full border-2 p-2 h-12 rounded-lg mt-2" />
                     </div>
                 </div>
-                <div className=" w-full mt-6">
+                <div className=" text-start w-full mt-6">
                     <label className="text-sm ">Details</label>
-                    <input name="details" type="text" placeholder="type your hair style name" className="w-full px-3 border-4 h-24 rounded-lg mt-2" />
+                    <input name="details" type="text" placeholder="type your hair style name" className="w-full px-3 border-2 p-2 h-24 rounded-lg mt-2" />
                 </div>
-                <div className=" w-full mt-6">
-                    <label className="text-sm ">Ingredients</label>
-                    <input name="ingredients" type="text" placeholder="type your hair style name" className="w-full px-3 border-4 h-24 rounded-lg mt-2" />
+                <div className=" text-start w-full mt-6">
+                    <label className="text-sm  ">Ingredients</label>
+                    <input name="ingredients" type="text" placeholder="type your hair style name" className="w-full px-3 border-2 p-2 h-24 rounded-lg mt-2" />
                 </div>
-                <div className=" w-full mt-6">
+                <div className=" text-start w-full mt-6">
                     <label className="text-sm ">Instructions</label>
-                    <input name="instructions" type="text" placeholder="type your hair style name" className="w-full px-3 border-4 h-24 rounded-lg mt-2" />
+                    <input name="instructions" type="text" placeholder="type your hair style name" className="w-full px-3 border-2 p-2 h-24 rounded-lg mt-2" />
                 </div>
                 <div className="flex justify-between items-center gap-9 mt-6">
                     <div className="w-full">

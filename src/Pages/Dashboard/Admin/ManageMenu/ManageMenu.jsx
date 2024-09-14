@@ -6,15 +6,56 @@ import { BiEdit } from 'react-icons/bi';
 import { RiDeleteBin5Line } from 'react-icons/ri';
 import { FaEdit, FaPlus } from 'react-icons/fa';
 import { MdVilla } from 'react-icons/md';
+import Swal from 'sweetalert2';
+import useAxiosPublic from '../../../../Components/Hooks/useAxiosPublic';
 
 const ManageMenu = () => {
      const [menus, refetch, loading] = useMenus()
+     const axiosPublic = useAxiosPublic()
+     const handleDelete = async (id) => {
+          try {
+               Swal.fire({
+                    title: "Are you sure?",
+                    text: "You won't be able to revert this!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                    confirmButtonText: "Yes, delete it!"
+               }).then((result) => {
+                    if (result.isConfirmed) {
+                         axiosPublic.delete(`/menuDelete/${id}`)
+                              .then(res => {
+                                   if (res.data.deletedCount > 0) {
+                                        refetch()
+                                        Swal.fire({
+                                             title: "Deleted!",
+                                             text: "Your file has been deleted.",
+                                             icon: "success"
+                                        });
+                                   }
+
+                              })
+
+                    }
+               });
+          }
+          catch (error) {
+               console.log(error);
+               Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Something went wrong! Please try again.",
+               });
+          }
+     }
+          
      return (
           <div>
                <div className="bg-white  rounded-lg">
                     <div className="flex justify-between p-5  gap-4 items-center">
 
-                         <h1 className='text-2xl w-1/6 border  font-semibold text-start'>Add Menu</h1>
+                         <h1 className='text-2xl w-1/6   font-semibold text-start'>Add Menu</h1>
                          <div>
                               <form className='flex gap-5' action="">
                                    <div>
@@ -54,7 +95,7 @@ const ManageMenu = () => {
                                    </div>
                               </form>
                          </div>
-                         <Link to={'/dashboard/addMenu'}
+                         <Link to={'/dashboard/addFood'}
                               className={"btn btn-success text-white "}>
                               <FaPlus className=" text-yellow-400 "></FaPlus>
                               Add Menu </Link>
