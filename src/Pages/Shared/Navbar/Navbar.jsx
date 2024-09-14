@@ -6,8 +6,8 @@ const Navbar = () => {
             <NavLink className={({isActive})=>isActive?'font-bold text-success':'font-semibold'} to={'/'}> <li><a> Home</a></li></NavLink> 
             <NavLink className={({isActive})=>isActive?'font-bold text-success border-l-2 px-3':'font-semibold border-l-2 px-2'} to={'/ourMenu'}> <li><a> our menu</a></li></NavLink> 
             <NavLink className={({isActive})=>isActive?'font-bold text-success border-l-2 px-3':'font-semibold border-l-2 px-2'} to={'/b'}> <li><a> Meals plan</a></li></NavLink> 
-            <NavLink className={({isActive})=>isActive?'font-bold text-success border-l-2 px-3':'font-semibold border-l-2 px-2'} to={'/c'}> <li><a>Catering</a></li></NavLink> 
-            <NavLink className={({isActive})=>isActive?'font-bold text-success border-l-2 px-3':'font-semibold border-l-2 px-2'} to={'/c'}> <li><a>How it work</a></li></NavLink> 
+            <NavLink className={({isActive})=>isActive?'font-bold text-success border-l-2 px-3':'font-semibold border-l-2 px-2'} to={'/catering'}> <li><a>Catering</a></li></NavLink> 
+            <NavLink className={({isActive})=>isActive?'font-bold text-success border-l-2 px-3':'font-semibold border-l-2 px-2'} to={'/howItWork'}> <li><a>How it work</a></li></NavLink> 
             <NavLink className={({isActive})=>isActive?'font-bold text-success border-l-2 px-3':'font-semibold border-l-2 px-2'} to={'/testimonials'}> <li><a>Testimonials</a></li></NavLink> 
             <NavLink className={({isActive})=>isActive?'font-bold text-success border-l-2 px-3':'font-semibold border-l-2 px-2'} to={'/faq'}> <li><a>FAQ</a></li></NavLink> 
           
@@ -15,7 +15,7 @@ const Navbar = () => {
      return (
           <div className=' '>
                <div className='text-center text-[14px] text-white rounded-xl bg-[#fdb64e] p-3'>
-                    <h1> %%   Free shipping on all orders   %% </h1>
+                    <> %%   Free shipping on all orders   %% </>
                </div>
                <div className="navbar container bg-base-100">
                     <div className="navbar-start">

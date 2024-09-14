@@ -8,6 +8,8 @@ import OurMenu from "../Pages/OurMenu/OurMenu/OurMenu";
 import Error from "../Pages/Shared/Error/Error";
 import FAQ from "../Pages/FAQ/FAQ";
 import Testimonials from "../Pages/Testimonials/Testimonials";
+import HowItWork from "../Pages/How it Work/HowItWork/HowItWork";
+import Catering from "../Pages/Catering/Catering/Catering";
    
    
 export  const router = createBrowserRouter([
@@ -20,14 +22,21 @@ export  const router = createBrowserRouter([
                element:<Home></Home>
           },
           {
-               path:'ourMenu',
+               path:'/ourMenu',
                element:<OurMenu></OurMenu>
           },{
-               path:'faq',
+               path:'/faq',
                element:<FAQ></FAQ>
           },{
-               path:'testimonials',
+               path:'/testimonials',
                element:<Testimonials></Testimonials>
+          },
+          {
+               path:'howItWork',
+               element:<HowItWork></HowItWork>
+          },{
+               path:'catering',
+               element:<Catering></Catering>
           }
        ]
      },

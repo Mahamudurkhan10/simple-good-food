@@ -19,12 +19,12 @@ const Banner = () => {
                </div>
                <div className='relative'>
                     <img
-                         className='relative'
+                         className='relative  border-blue-700'
                          src='https://i.ibb.co/pnfMyN8/Subtract.png'
                          alt='Banner decoration'
                     />
                     <img
-                         className='absolute lg:-mt-[441px] lg:ml-[110px] -mt-[300px] ml-[50px] w-[250px] lg:w-[340px]'
+                         className='absolute  lg:-mt-[441px] lg:ml-[110px] -mt-[300px] ml-[50px] w-[250px] lg:w-[340px]'
                          src='https://i.ibb.co/4pHkFcs/Mask-group.png'
                          alt='Fitness illustration'
                     />
