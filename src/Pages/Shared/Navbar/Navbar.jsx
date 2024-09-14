@@ -4,12 +4,12 @@ import { Link, NavLink } from 'react-router-dom';
 const Navbar = () => {
      const navItems = <div className='flex   flex-col lg:flex-row lg:mr-9'>
             <NavLink className={({isActive})=>isActive?'font-bold text-success':'font-semibold'} to={'/'}> <li><a> Home</a></li></NavLink> 
-            <NavLink className={({isActive})=>isActive?'font-bold text-success border-l-2 px-3':'font-semibold border-l-2 px-2'} to={'/a'}> <li><a> our menu</a></li></NavLink> 
+            <NavLink className={({isActive})=>isActive?'font-bold text-success border-l-2 px-3':'font-semibold border-l-2 px-2'} to={'/ourMenu'}> <li><a> our menu</a></li></NavLink> 
             <NavLink className={({isActive})=>isActive?'font-bold text-success border-l-2 px-3':'font-semibold border-l-2 px-2'} to={'/b'}> <li><a> Meals plan</a></li></NavLink> 
             <NavLink className={({isActive})=>isActive?'font-bold text-success border-l-2 px-3':'font-semibold border-l-2 px-2'} to={'/c'}> <li><a>Catering</a></li></NavLink> 
             <NavLink className={({isActive})=>isActive?'font-bold text-success border-l-2 px-3':'font-semibold border-l-2 px-2'} to={'/c'}> <li><a>How it work</a></li></NavLink> 
-            <NavLink className={({isActive})=>isActive?'font-bold text-success border-l-2 px-3':'font-semibold border-l-2 px-2'} to={'/c'}> <li><a>Testimonials</a></li></NavLink> 
-            <NavLink className={({isActive})=>isActive?'font-bold text-success border-l-2 px-3':'font-semibold border-l-2 px-2'} to={'/c'}> <li><a>FAQ</a></li></NavLink> 
+            <NavLink className={({isActive})=>isActive?'font-bold text-success border-l-2 px-3':'font-semibold border-l-2 px-2'} to={'/testimonials'}> <li><a>Testimonials</a></li></NavLink> 
+            <NavLink className={({isActive})=>isActive?'font-bold text-success border-l-2 px-3':'font-semibold border-l-2 px-2'} to={'/faq'}> <li><a>FAQ</a></li></NavLink> 
           
      </div>
      return (
