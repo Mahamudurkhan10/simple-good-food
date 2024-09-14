@@ -12,6 +12,7 @@ import HowItWork from "../Pages/How it Work/HowItWork/HowItWork";
 import Catering from "../Pages/Catering/Catering/Catering";
 import Login from "../Pages/Shared/Login/Login";
 import SignUp from "../Pages/Shared/SignUp/SignUp";
+import Dashboard from "../LayOut/Dashboard";
    
    
 export  const router = createBrowserRouter([
@@ -48,6 +49,10 @@ export  const router = createBrowserRouter([
                element:<SignUp></SignUp>
           }
        ]
+     },
+     {
+          path:'/dashboard',
+          element:<Dashboard></Dashboard>
      },
      {
           path:'*',
