@@ -52,7 +52,7 @@ const Navbar = () => {
                     </div>
                     <div className="navbar-end flex gap-4">
                          <Link to={'/login'} className="btn border text-[#6ea963] hover:text-white border-[#6ea963] btn-outline hover:bg-[#6ea963] px-5">log in</Link>
-                         <a className="btn text-[#6ea963] hover:text-white border border-[#6ea963] px-5 hover:bg-[#6ea963]">SignUp</a>
+                         <Link to={'/signUp'} className="btn text-[#6ea963] hover:text-white border border-[#6ea963] px-5 hover:bg-[#6ea963]">SignUp</Link>
                     </div>
                </div>
           </div>
