@@ -10,6 +10,7 @@ import FAQ from "../Pages/FAQ/FAQ";
 import Testimonials from "../Pages/Testimonials/Testimonials";
 import HowItWork from "../Pages/How it Work/HowItWork/HowItWork";
 import Catering from "../Pages/Catering/Catering/Catering";
+import Login from "../Pages/Shared/Login/Login";
    
    
 export  const router = createBrowserRouter([
@@ -32,11 +33,14 @@ export  const router = createBrowserRouter([
                element:<Testimonials></Testimonials>
           },
           {
-               path:'howItWork',
+               path:'/howItWork',
                element:<HowItWork></HowItWork>
           },{
-               path:'catering',
+               path:'/catering',
                element:<Catering></Catering>
+          },{
+               path:'/login',
+               element:<Login></Login>
           }
        ]
      },
