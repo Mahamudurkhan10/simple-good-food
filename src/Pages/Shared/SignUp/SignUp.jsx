@@ -2,10 +2,12 @@ import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Components/Provider/AuthProvider';
 import Swal from 'sweetalert2';
+import useAxiosPublic from '../../../Components/Hooks/useAxiosPublic';
 
 const SignUp = () => {
      const { user,  Register, updateUserProfile } = useContext(AuthContext)
      const navigate = useNavigate()
+     const axiosPublic = useAxiosPublic()
      const location = useLocation()
      const form = location.state?.form?.pathname || "/";
      const currentDate = new Date()
@@ -26,34 +28,34 @@ const SignUp = () => {
                     return updateUserProfile(name, photoURL)
 
                })
-             .then(()=>{
-               navigate(form,{replace:true})
-             })
-               // .then( async ()  => {
-               //      const userInfo = {
-               //           name: name,
-               //           number:contactNumber,
-               //           address: permanentAddress,
-               //           email: email,
-               //           photoURL: photoURL,                       
-               //           role: "user",
-               //           creationDate: currentDate
-               //      }
-               //      return axios.post('https://estatein-server.vercel.app/users', userInfo)
-               //           .then(res => {
-               //                if (res.data.insertedId) {
+          //    .then(()=>{
+          //      navigate(form,{replace:true})
+          //    })
+               .then( async ()  => {
+                    const userInfo = {
+                         name: name,
+                         number:contactNumber,
+                         address: permanentAddress,
+                         email: email,
+                         photoURL: photoURL,                       
+                         role: "user",
+                         creationDate: currentDate
+                    }
+                    return axiosPublic.post('/users', userInfo)
+                         .then(res => {
+                              if (res.data.insertedId) {
                                       
-               //                     Swal.fire({
-               //                          position: "top-end",
-               //                          icon: "success",
-               //                          title: "Your Login success",
-               //                          showConfirmButton: false,
-               //                          timer: 1500
-               //                     });
-               //                     navigate(form,{replace:true})
-               //                }
-               //           })
-               // })
+                                   Swal.fire({
+                                        position: "top-end",
+                                        icon: "success",
+                                        title: "Your Login success",
+                                        showConfirmButton: false,
+                                        timer: 1500
+                                   });
+                                   navigate(form,{replace:true})
+                              }
+                         })
+               })
                .catch(error => {
                     console.log("Error", error);
                     Swal.fire({

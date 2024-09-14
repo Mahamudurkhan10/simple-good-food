@@ -13,6 +13,8 @@ import Catering from "../Pages/Catering/Catering/Catering";
 import Login from "../Pages/Shared/Login/Login";
 import SignUp from "../Pages/Shared/SignUp/SignUp";
 import Dashboard from "../LayOut/Dashboard";
+import ManageMenu from "../Pages/Dashboard/Admin/ManageMenu/ManageMenu";
+import AddFood from "../Pages/Dashboard/Admin/AddFood/AddFood";
    
    
 export  const router = createBrowserRouter([
@@ -52,7 +54,16 @@ export  const router = createBrowserRouter([
      },
      {
           path:'/dashboard',
-          element:<Dashboard></Dashboard>
+          element:<Dashboard></Dashboard>,
+          children:[
+               {
+                    path:'manageMenu',
+                    element:<ManageMenu></ManageMenu>
+               },{
+                    path:'addFood',
+                    element:<AddFood></AddFood>
+               }
+          ]
      },
      {
           path:'*',

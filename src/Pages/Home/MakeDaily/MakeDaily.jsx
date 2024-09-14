@@ -10,7 +10,7 @@ const MakeDaily = () => {
                               <h1 className='lg:text-3xl font-semibold text-2xl'> Make daily meals 
                               healthy and moderate</h1>
                               <p className='py-4'>Ingredients are naturally rich and full of taste.</p>
-                              <button className='btn'> Meal plans <MdArrowOutward></MdArrowOutward> </button>
+                              <button className='btn bg-[#fdb64e]'> Meal plans <MdArrowOutward></MdArrowOutward> </button>
                               </div>
                          </div>
                </div>

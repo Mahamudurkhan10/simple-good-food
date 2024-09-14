@@ -2,6 +2,9 @@ import { useContext } from "react";
 import { FaArrowLeft } from "react-icons/fa6";
 import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Components/Provider/AuthProvider";
+import { TbTransactionDollar } from "react-icons/tb";
+import { AiOutlineProduct } from "react-icons/ai";
+import { FaComments } from "react-icons/fa";
 
 const Dashboard = () => {
      const {user,logOut} = useContext(AuthContext)  
@@ -55,15 +58,18 @@ const Dashboard = () => {
                 {/* Sidebar */}
                 <div className="w-64 min-h-screen text-white bg-[#6eb661] pt-6 border-2 space-y-3">
                     <Link 
-                        className={"btn bg-[#fdfdfd] hover:bg-[#6ea963] w-full"}>
+                        className={"btn flex items-center text-lg gap-2 bg-[#fdfdfd] hover:bg-[#6ea963] w-full"}>
+                         <TbTransactionDollar />
                         transactions
                     </Link>
-                    <Link to={'/dashboard/allMenus'}
-                        className={" btn bg-[#fdfdfd]  hover:bg-[#6ea963] w-full"}>
+                    <Link to={'/dashboard/manageMenu'}
+                        className={" btn flex items-center gap-2 text-lg bg-[#fdfdfd]  hover:bg-[#6ea963] w-full"}>
+                         <AiOutlineProduct />
                         Manage Menu
                     </Link>
                     <Link
-                        className={"btn bg-[#fdfdfd] hover:bg-[#6ea963] w-full"}>
+                        className={"btn flex items-center gap-2 text-lg bg-[#fdfdfd] hover:bg-[#6ea963] w-full"}>
+                         <FaComments />
                         Manage Testimonials
                     </Link>
                     <div className="pt-20">

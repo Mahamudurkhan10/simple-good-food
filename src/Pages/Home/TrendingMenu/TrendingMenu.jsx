@@ -9,16 +9,18 @@ import 'swiper/css/navigation';
 
 import MenuCard from './MenuCard';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import useAxiosPublic from '../../../Components/Hooks/useAxiosPublic';
 
 const TrendingMenu = () => {
   const [foods, setFoods] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const swiperRef = useRef(null);
-
+  const axiosPublic = useAxiosPublic()
+  console.log(foods);
   useEffect(() => {
-    fetch('/menu.json')
-      .then((res) => res.json())
-      .then((data) => setFoods(data))
+       axiosPublic('/menus')
+      
+      .then((res) => setFoods(res.data))
       .catch((error) => console.error('Error fetching menu:', error));
   }, []);
 
