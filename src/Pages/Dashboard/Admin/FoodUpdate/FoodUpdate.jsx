@@ -34,9 +34,9 @@ const FoodUpdate = () => {
                if (res.data.modifiedCount > 0) {
                    Swal.fire({
                        title: 'Success!',
-                       text: 'Items updated Successfully',
+                       text: 'foods updated Successfully',
                        icon: 'success',
-                       confirmButtonText: 'Cool'
+                       confirmButtonText: 'good'
                    })
                    navigate('/dashboard/manageMenu')
                }
@@ -54,16 +54,16 @@ const FoodUpdate = () => {
         <h1 className="text-2xl font-semibold text-green-400">Add Food menu</h1>
         <div className="mt-7">
             <form onSubmit={handleUpdate}>
-                <div className="flex items-center justify-between gap-6 ">
-                    <div className=" w-full ">
+                <div className="flex text-lg font-semibold p-3 items-center justify-between gap-6 ">
+                    <div className=" text-start w-full ">
                         <label className="text-sm ">Name</label>
                         <input name="foodName" type="text" placeholder="First name" className="w-full border-4 h-12 rounded-lg mt-2" defaultValue={food.foodName} />
                     </div>
-                    <div className=" w-full ">
+                    <div className="  w-full ">
                         <label className="text-sm ">Image</label>
                         <input name="image" type="text" placeholder="Image" className="w-full border-4 h-12 rounded-lg mt-2" defaultValue={food.image} />
                     </div>
-                    <div className=" w-full ">
+                    <div className="  w-full ">
                         <label className="text-sm ">Price</label>
                         <input name="price" type="text" placeholder="Image" className="w-full border-4 h-12 rounded-lg mt-2" defaultValue={food.price}/>
                     </div>
@@ -78,20 +78,20 @@ const FoodUpdate = () => {
                         <label className="text-sm ">Carbs</label>
                         <input name="carbs" type="text" placeholder="25g" className="w-full border-4 h-12 rounded-lg mt-2" defaultValue={food.carbs}/>
                     </div>
-                    <div className=" w-full ">
+                    <div className="  w-full ">
                         <label className="text-sm ">Fat</label>
                         <input name="fat" type="text" placeholder="20g" className="w-full border-4 h-12 rounded-lg mt-2"  defaultValue={food.fat} />
                     </div>
                 </div>
-                <div className=" w-full mt-6">
+                <div className=" text-start w-full mt-6">
                     <label className="text-sm ">Details</label>
                     <input name="description" type="text" placeholder="type your hair style name" className="w-full px-3 border-4 h-24 rounded-lg mt-2" defaultValue={food.description} />
                 </div>
-                <div className=" w-full mt-6">
+                <div className=" text-start  w-full mt-6">
                     <label className="text-sm ">Ingredients</label>
                     <input name="ingredients" type="text" placeholder="type your hair style name" className="w-full px-3 border-4 h-24 rounded-lg mt-2" defaultValue={food.ingredients}/>
                 </div>
-                <div className=" w-full mt-6">
+                <div className=" text-start w-full mt-6">
                     <label className="text-sm ">Instructions</label>
                     <input name="instructions" type="text" placeholder="type your hair style name" className="w-full px-3 border-4 h-24 rounded-lg mt-2" defaultValue={food.instructions} />
                 </div>
@@ -105,7 +105,7 @@ const FoodUpdate = () => {
                             <option>Snack</option>
                         </select>
                     </div>
-                    <div className="w-full">
+                    <div className=" text-start w-full">
                         <label>Meal Plan</label>
                         <select name="category" className="select select-bordered w-full mt-2" defaultValue={food.category}>
                             <option>Small Meal</option>
