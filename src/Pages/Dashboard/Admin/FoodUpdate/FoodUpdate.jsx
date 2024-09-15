@@ -69,7 +69,7 @@ const FoodUpdate = () => {
                     </div>
                 </div>
 
-                <div className="flex w-3/4 mt-6   items-center justify-between gap-6 ">
+                <div className="flex w-3/4 mt-6 items-center justify-between gap-6 ">
                     <div className=" w-full ">
                         <label className="text-sm ">Protein</label>
                         <input name="protein" type="text" placeholder="55g" className="w-full border-4 h-12 rounded-lg mt-2" defaultValue={food.protein}/>
