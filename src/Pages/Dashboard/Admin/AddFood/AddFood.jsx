@@ -29,7 +29,7 @@ const AddFood = () => {
 
            
           const res = axiosPublic.post('/menus',newPost)
-            .then(res => {
+            .then( () => {
                 if (res.data.insertedId) {
                     
                         Swal.fire({

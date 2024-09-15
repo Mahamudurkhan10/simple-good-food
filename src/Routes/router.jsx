@@ -15,6 +15,9 @@ import SignUp from "../Pages/Shared/SignUp/SignUp";
 import Dashboard from "../LayOut/Dashboard";
 import ManageMenu from "../Pages/Dashboard/Admin/ManageMenu/ManageMenu";
 import AddFood from "../Pages/Dashboard/Admin/AddFood/AddFood";
+import FoodUpdate from "../Pages/Dashboard/Admin/FoodUpdate/FoodUpdate";
+import MenuDetails from "../Pages/OurMenu/MenuDetails/MenuDetails";
+import PrivateRouter from "./PrivateRouter";
    
    
 export  const router = createBrowserRouter([
@@ -49,6 +52,11 @@ export  const router = createBrowserRouter([
           {
                path:'/signUp',
                element:<SignUp></SignUp>
+          },
+          {
+               path:'menuDetails/:id',
+               element:<PrivateRouter> <MenuDetails></MenuDetails></PrivateRouter>,
+               loader: ({params})=> fetch(`https://simple-good-food-server-nine.vercel.app/menu/${params.id}`)
           }
        ]
      },
@@ -62,6 +70,10 @@ export  const router = createBrowserRouter([
                },{
                     path:'addFood',
                     element:<AddFood></AddFood>
+               },{
+                    path:'update/:id',
+                    element:<FoodUpdate></FoodUpdate>,
+                    loader: ({params})=> fetch(`https://simple-good-food-server-nine.vercel.app/menu/${params.id}`)
                }
           ]
      },

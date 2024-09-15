@@ -21,8 +21,11 @@ const OurMenu = () => {
      }
      return (
           <div>
-               <div>
-                    <button>  </button>
+               <div className='flex gap-4 m-5 container'>
+                    <button className='btn hover:bg-yellow-600 hover:text-white'> Full menus </button>
+                    <button className='btn hover:bg-yellow-600 hover:text-white'> Enteree</button>
+                    <button className='btn hover:bg-yellow-600 hover:text-white'> Breakfast</button>
+                    <button className='btn hover:bg-yellow-600 hover:text-white'> Snacks</button>
                </div>
                <div className='grid grid-cols-3 gap-4'>
                     {menus.map(food => <MenuCard key={food._id} food={food}></MenuCard>)}
