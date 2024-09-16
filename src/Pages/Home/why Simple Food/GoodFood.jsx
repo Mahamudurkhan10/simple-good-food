@@ -2,7 +2,7 @@ import React from 'react';
 
 const GoodFood = () => {
      return (
-          <div className='mt-5 container'>
+          <div className='mt-5  '>
              <div>
                <h1 className='text-5xl font-semibold text-center'> Why Simply Good Food  </h1>
              </div>

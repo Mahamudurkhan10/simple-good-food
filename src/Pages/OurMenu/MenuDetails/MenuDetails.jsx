@@ -23,7 +23,7 @@ const MenuDetails = () => {
                     <div tabIndex={0} className="collapse collapse-arrow border-base-300 bg-base-200 border">
                         <div className="collapse-title text-xl font-medium">Ingredients</div>
                         <div className="collapse-content">
-                            {data.ingredients.map(p => <div className="text-start"> <li> {p} </li></div> )}
+                            {data.ingredients.map((p,inx) => <div key={inx} className="text-start"> <li> {p} </li></div> )}
                         </div>
                     </div>
                     <div tabIndex={0} className="collapse collapse-arrow border-base-300 bg-base-200 border">

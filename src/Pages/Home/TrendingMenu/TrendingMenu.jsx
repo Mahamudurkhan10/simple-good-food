@@ -47,7 +47,7 @@ const TrendingMenu = () => {
       </div>
 
     <div>
-    <div className='mt-6 container mx-auto relative'>
+    <div className='mt-6   mx-auto relative'>
         {foods.length > 0 && (
           <Swiper
             ref={swiperRef}
@@ -70,8 +70,8 @@ const TrendingMenu = () => {
             }}
           >
             {foods.map((food) => (
-              <SwiperSlide key={food.id}>
-                <div className='p-2'><MenuCard food={food} /></div>
+              <SwiperSlide key={food._id}>
+                <div className='p-2'><MenuCard key={food._id} food={food} /></div>
               </SwiperSlide>
             ))}
           </Swiper>

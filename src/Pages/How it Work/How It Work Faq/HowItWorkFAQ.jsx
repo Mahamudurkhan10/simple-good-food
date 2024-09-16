@@ -4,7 +4,7 @@ import { FaArrowRight } from 'react-icons/fa';
 const HowItWorkFAQ = () => {
      return (
           <div className='mt-12 mb-24'>
-               <div className='flex container flex-col lg:flex-row gap-6 items-start '>
+               <div className='flex   flex-col lg:flex-row gap-6 items-start '>
                     <div className='flex-1'>
                          <section className=" dark:text-gray-800">
                               <div className=" text-start  flex flex-col justify-center  mx-auto ">

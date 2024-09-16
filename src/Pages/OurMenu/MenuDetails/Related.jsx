@@ -39,7 +39,7 @@ const Related = () => {
       </div>
 
     <div>
-    <div className='mt-3 container mx-auto relative'>
+    <div className='mt-3   mx-auto relative'>
         {foods.length > 0 && (
           <Swiper
             ref={swiperRef}
@@ -63,7 +63,7 @@ const Related = () => {
           >
             {foods.map((food) => (
               <SwiperSlide key={food._id}>
-                <div className='p-2'><RelatedCard food={food} /></div>
+                <div className='p-2'><RelatedCard key={food._id} food={food} /></div>
               </SwiperSlide>
             ))}
           </Swiper>

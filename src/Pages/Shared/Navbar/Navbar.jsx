@@ -38,7 +38,7 @@ const Navbar = () => {
                <div className='text-center text-[14px] text-white rounded-xl bg-[#fdb64e] p-3'>
                     <> %%   Free shipping on all orders   %% </>
                </div>
-               <div className="navbar container bg-base-100">
+               <div className="navbar   bg-base-100">
                     <div className="navbar-start">
                          <div className="dropdown">
                               <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

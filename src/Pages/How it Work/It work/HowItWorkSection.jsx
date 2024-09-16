@@ -3,7 +3,7 @@ import React from 'react';
 const HowItWorkSection = () => {
      return (
           <div className='bg-gray-50 rounded-xl mt-5 mb-5'>
-               <div className='text-start container pt-4'>
+               <div className='text-start   pt-4'>
                     <h1 className='text-5xl font-semibold'>How it Works</h1>
                     <p className='text-lg w-2/3 py-3'> Subscribe for free shipping. Just pick your meals, tell us how often you want them,and then we’ll take care of the rest. </p>
                     <div className=' grid grid-cols-1  lg:grid-cols-2 gap-6 lg:p-16 lg:pr-4'>

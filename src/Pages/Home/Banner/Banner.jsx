@@ -8,7 +8,7 @@ const Banner = () => {
                style={{ backgroundImage: "url('https://i.ibb.co/3Mjm4Fr/Rectangle-1.png')" }}
                className='  mt-5 bg-cover lg:h-[650px] bg-center flex lg:flex-col flex-col-reverse'
           >
-             <div className='container flex  flex-col-reverse lg:flex-row justify-between lg:text-start items-center pt-5'>
+             <div className='  flex  flex-col-reverse lg:flex-row justify-between lg:text-start items-center pt-5'>
              <div className='lg:w-1/2'>
                     <h1 className='lg:text-6xl  text-4xl font-semibold'>
                          Keep track of{' '}

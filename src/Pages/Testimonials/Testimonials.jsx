@@ -3,7 +3,7 @@ import React from 'react'
 export default function Testimonials() {
      return (
           <div>
-             <div className='container '>
+             <div className='  '>
              <div>
                     <h1 className='text-5xl text-start font-semibold'> Testimonials </h1>
                </div>

@@ -35,7 +35,7 @@ const Feedback = () => {
       </div>
 
     <div>
-    <div className='mt-6 container mx-auto relative'>
+    <div className='mt-6   mx-auto relative'>
         {foods.length > 0 && (
           <Swiper
             ref={swiperRef}
