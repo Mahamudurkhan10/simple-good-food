@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -39,7 +39,8 @@ const Feedback = () => {
         {foods.length > 0 && (
           <Swiper
             ref={swiperRef}
-            modules={[Navigation, Pagination]}
+            modules={[Navigation, Pagination,Autoplay]}
+            autoplay={{delay:4000}}
             spaceBetween={20}
             pagination={{ clickable: true, type: 'custom' }}
             navigation={false}
@@ -62,7 +63,7 @@ const Feedback = () => {
                 <div className='p-2'>
                    <div className='flex gap-5 '>
                    <div>
-                        <img className=' w-full rounded-full' src={food.image} alt="" />
+                        <img className='  size-24 rounded-full' src={food.image} alt="" />
                     </div>
                  
                    <div className='text-start'>

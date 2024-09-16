@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -24,21 +24,8 @@ const TrendingMenu = () => {
       .catch((error) => console.error('Error fetching menu:', error));
   }, []);
 
-  const handleSlideChange = (swiper) => {
-    setCurrentIndex(swiper.activeIndex);
-  };
+ 
 
-  const goToNextSlide = () => {
-    if (swiperRef.current) {
-      swiperRef.current.swiper.slideNext();
-    }
-  };
-
-  const goToPreviousSlide = () => {
-    if (swiperRef.current) {
-      swiperRef.current.swiper.slidePrev();
-    }
-  };
 
   return (
     <div className='relative'>
@@ -47,16 +34,19 @@ const TrendingMenu = () => {
       </div>
 
     <div>
-    <div className='mt-6   mx-auto relative'>
+    <div className='mt-6   mx-auto '>
         {foods.length > 0 && (
           <Swiper
             ref={swiperRef}
-            modules={[Navigation, Pagination]}
+            modules={[Navigation, Pagination,Autoplay]}
+            autoplay={{delay:2000}}
             spaceBetween={20}
+            
             pagination={{ clickable: true, type: 'custom' }}
-            navigation={false}
-            onSlideChange={handleSlideChange}
+            navigation={true}
+         
             initialSlide={0}
+            
             breakpoints={{
               640: {
                 slidesPerView: 1,
@@ -79,24 +69,7 @@ const TrendingMenu = () => {
 
        
       </div>
-      <div className='absolute  left-0 right-0 flex justify-between top-[300px] '>
-          <button
-            onClick={goToPreviousSlide}
-            className={` text-xl p-2 rounded-full hover:bg-gray-700 ${
-              currentIndex === 0 ? 'text-gray-500 cursor-not-allowed' : ''
-            }`}
-            disabled={currentIndex === 0}
-          >
-            <FaArrowLeft />
-          </button>
-
-          <button
-            onClick={goToNextSlide}
-            className=' text-xl    p-2 rounded-full hover:bg-gray-700'
-          >
-            <FaArrowRight />
-          </button>
-        </div>
+    
     </div>
     </div>
   );

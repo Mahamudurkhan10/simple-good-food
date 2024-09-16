@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB0x8ehAYTjWbmeobWBm2Sv7jR1rlHtWKs",
-  authDomain: "simple-good-food.firebaseapp.com",
-  projectId: "simple-good-food",
-  storageBucket: "simple-good-food.appspot.com",
-  messagingSenderId: "876206111210",
-  appId: "1:876206111210:web:3d3db264fc8f591ec51a93"
+  apiKey: "AIzaSyDJGGXgQ4wBFxO-0FJ4yJS4ICeEhpgTFBY",
+  authDomain: "yummy--food.firebaseapp.com",
+  projectId: "yummy--food",
+  storageBucket: "yummy--food.appspot.com",
+  messagingSenderId: "1086800890886",
+  appId: "1:1086800890886:web:6ca25313738eee106d0787"
 };
 
 // Initialize Firebase

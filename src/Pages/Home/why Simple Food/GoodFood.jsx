@@ -4,7 +4,7 @@ const GoodFood = () => {
      return (
           <div className='mt-5  '>
              <div>
-               <h1 className='text-5xl font-semibold text-center'> Why Simply Good Food  </h1>
+               <h1 className='text-5xl  font-semibold text-center'> Why Simply Good Food  </h1>
              </div>
                <div className='grid grid-cols-1 mt-9 lg:grid-cols-3 gap-5'>
                     <div className='p-4'>
