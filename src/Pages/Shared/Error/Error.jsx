@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Error = () => {
      return (
           <div style={{ backgroundImage: "url('https://i.ibb.co.com/fvYNyt3/Rectangle-1292.png')" }}
-          className='  mt-5 bg-cover lg:h-[650px] bg-center opacity-95  '>
+          className='  mt-5 bg-cover h-screen bg-center opacity-95  '>
                <section className="flex items-center h-full p-16 dark:text-gray-800">
                     <div className="  flex flex-col items-center justify-center px-5 mx-auto my-8">
                          <div className="max-w-md text-center">

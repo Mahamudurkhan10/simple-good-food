@@ -31,7 +31,7 @@ const Banner = () => {
                </div>
              </div>
              <div>
-               <button className='lg:ml-[1000px] ml-[250px] bg-[#6ea963]  rounded-full p-6'> <FaShoppingCart className='text-white text-2xl relative'></FaShoppingCart> <span className='absolute text-white -mt-11 '>0</span>  </button>
+               
              </div>
           </div>
      );

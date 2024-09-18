@@ -53,7 +53,7 @@ const ManageMenu = () => {
      return (
           <div>
                <div className="bg-white  rounded-lg">
-                    <div className="flex justify-between p-5  gap-4 items-center">
+                    <div className="flex flex-col justify-between p-5  gap-4 items-center">
 
                          <h1 className='text-2xl w-1/6   font-semibold text-start'>Add Menu</h1>
                          <div>

@@ -24,14 +24,18 @@ const Dashboard = () => {
     return (
         <div>
             {/* Navbar */}
-            <div className="navbar bg-base-100 max-w-7xl shadow-lg mx-auto">
+            <div className="navbar  bg-base-100 max-w-7xl shadow-lg mx-auto">
                 <div className="navbar bg-base-100 max-w-7xl  shadow-lg mx-auto">
+               
                     <div className="flex-1">
                         <Link to={'/'} className=" animate-spin ">
                             <img src="https://i.ibb.co.com/4VDc55j/305708784-514923217301661-1311194014409716321-n-1.png" alt="Logo" />
                         </Link>
+                        <div className="ml-3">
+                        <Link to={'/dashboard'} className="text-3xl font-bold">Dashboard</Link>
+                     </div>
                     </div>
-                    
+                     
                     <div className="flex-none gap-2">
                         
                         <div className="dropdown dropdown-end">
@@ -54,16 +58,16 @@ const Dashboard = () => {
                 </div>
             </div>
 
-            <div className="flex">
+            <div className="flex  flex-col lg:flex-row">
                 {/* Sidebar */}
-                <div className="w-64 min-h-screen text-white bg-[#6eb661] pt-6 border-2 space-y-3">
+                <div className="  lg:w-64 lg:min-h-screen text-white bg-[#6eb661] pt-6 border-2 space-y-3">
                     <Link 
                         className={"btn flex items-center text-lg gap-2 bg-[#fdfdfd] hover:bg-[#6ea963] w-full"}>
                          <TbTransactionDollar />
                         transactions
                     </Link>
                     <Link to={'/dashboard/manageMenu'}
-                        className={" btn flex items-center gap-2 text-lg bg-[#fdfdfd]  hover:bg-[#6ea963] w-full"}>
+                        className={" btn flex items-center gap-2 lg:text-lg bg-[#fdfdfd]  hover:bg-[#6ea963] w-full"}>
                          <AiOutlineProduct />
                         Manage Menu
                     </Link>

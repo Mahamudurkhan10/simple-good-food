@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../Components/Provider/AuthProvider';
 import { SlLogout } from 'react-icons/sl';
+import { FaShoppingCart } from 'react-icons/fa';
 
 const Navbar = () => {
      const { user, logOut } = useContext(AuthContext);
@@ -34,9 +35,10 @@ const Navbar = () => {
           </>
      );
      return (
-          <div className=' '>
+          <div className='relative'> 
                <div className='text-center text-[14px] text-white rounded-xl bg-[#fdb64e] p-3'>
-                    <m> %%   Free shipping on all orders   %% </m>
+               <marquee scrollamount='15' class="text-white  text-lg">%% Free shipping on all orders %%</marquee>
+
                </div>
                <div className="navbar  bg-base-100">
                     <div className="navbar-start">
@@ -100,6 +102,9 @@ const Navbar = () => {
                               )}
                          </div>
                     </div>
+               </div>
+               <div className='flex justify-end '>
+               <button className='fixed  bg-[#6ea963] mt-[500px] z-10  rounded-full p-5'> <FaShoppingCart className='text-white  text-3xl relative'></FaShoppingCart> <span className='absolute text-white -mt-12 '>01 </span> </button>
                </div>
           </div>
      );
