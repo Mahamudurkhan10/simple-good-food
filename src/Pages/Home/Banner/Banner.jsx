@@ -6,9 +6,9 @@ const Banner = () => {
      return (
           <div
                
-               className='  mt-5 bg-cover lg:h-[650px] bg-center flex lg:flex-col flex-col-reverse'
+               className=' '
           >
-             <div style={{ backgroundImage: "url('https://i.ibb.co/3Mjm4Fr/Rectangle-1.png')" }} className='  flex  flex-col-reverse lg:flex-row justify-around lg:text-start items-center pt-5'>
+             <div style={{ backgroundImage: "url('https://i.ibb.co/3Mjm4Fr/Rectangle-1.png')" }} className=' h-[650px]  flex  flex-col-reverse lg:flex-row justify-around lg:text-start items-center pt-5'>
              <div className='lg:w-1/2'>
                     <h1 className='lg:text-6xl  text-4xl font-semibold'>
                          Keep track of{' '}
